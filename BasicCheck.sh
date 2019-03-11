@@ -34,7 +34,12 @@ then
   helg=1
   fi
 else 
+  if(($valg>0))
+  then 
   helg=2
+  else
+  helg=0
+  fi
 fi
 
 # echo $helg
