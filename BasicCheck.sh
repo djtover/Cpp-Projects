@@ -15,7 +15,7 @@ fi
 # Run valgrind for memory leaks 
 valgrind --leak-check=full --error-exitcode=1 ./$file
 valg=$?
-# echo "valgrind exitcode is $valg"
+echo "valgrind exitcode is $valg"
 if (($valg > 0))
 then 
   valg=2
@@ -33,6 +33,8 @@ then
   else
   helg=1
   fi
+else 
+  helg=2
 fi
 
 # echo $helg
